@@ -1,86 +1,69 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鄭伃媃的履歷</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* 全域設定：營造圖片中的簡約與溫暖感 */
+body {
+    font-family: "Noto Serif TC", "serif"; /* 使用襯線體 */
+    background-color: #fcfbf9; /* 溫暖的米白色背景 */
+    color: #4a4a4a;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
 
-    <nav>
-        <div class="logo">鄭伃媃</div>
-        <ul class="nav-links">
-            <li><a href="#about">關於我</a></li>
-            <li><a href="#education">教育</a></li>
-            <li><a href="#skills">技能</a></li>
-            <li><a href="#projects">專案</a></li>
-            <li><a href="#contact">聯絡我</a></li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
+/* 導覽列 */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    background: #fff;
+    border-bottom: 1px solid #d3c4b1; /* 淺褐色細線 */
+}
 
-    <header id="hero">
-        <div class="hero-text">
-            <h1>我是<span class="highlight">鄭伃媃</span></h1>
-            <p>亞洲大學學生 | 學號: 114018012</p>
-            <a href="#contact" class="btn">聯絡我</a>
-        </div>
-        <div class="hero-img">
-           <img src="image/photo.jpg" alt="鄭伃媃的照片" width="180" style="border-radius: 50%;">
-        </div>
-    </header>
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8c7662; /* 圖片中的主色調：深褐色 */
+}
 
-    <section id="about">
-        <h2>關於我</h2>
-        <p>目前就讀於亞洲大學。我是一個充滿熱情和創意的學生，對網頁開發、資料科學、行銷等有濃厚的興趣。我熱衷於學習新技術，並樂於在實踐中應用所學知識。</p>
-    </section>
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
 
-    <section id="education">
-        <h2>教育背景</h2>
-        <div class="edu-item">
-            <h3>亞洲大學</h3>
-            <p>[您的科系/專業]</p>
-            <p>[入學年份] - 至今</p>
-            <p>學號: 114018012</p>
-        </div>
-        </section>
+.nav-links li a {
+    text-decoration: none;
+    color: #666;
+    margin: 0 15px;
+    font-size: 0.9rem;
+}
 
-    <section id="skills">
-        <h2>技能</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            </ul>
-    </section>
+/* 首頁區塊 (Hero Section) */
+#hero {
+    display: flex;
+    flex-direction: row-reverse; /* 讓文字在左、圖片在右 */
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+    gap: 50px;
+}
 
-    <section id="projects">
-        <h2>專案經歷</h2>
-        <div class="proj-card">
-            <h3>[專案名稱 1]</h3>
-            <p>一個使用 React 開發的單頁應用程式...</p>
-            <p>技術: [所使用的技術]</p>
-        </div>
-        </section>
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
 
-    <section id="contact">
-        <h2>聯絡我</h2>
-        <p>歡迎與我聯絡，您可以透過以下方式找到我：</p>
-        <p>Email: <a href="mailto:your-email@example.com">[您的 Email]</a></p>
-        <p>GitHub: <a href="your-github-profile-url" target="_blank">[您的 GitHub Profile]</a></p>
-        <p>LinkedIn: <a href="your-linkedin-profile-url" target="_blank">[您的 LinkedIn Profile]</a></p>
-    </section>
+.highlight {
+    color: #8c7662; /* 姓名顏色 */
+}
 
-    <footer>
-        <p>&copy; 2024 鄭伃媃. All rights reserved.</p>
-    </footer>
+.hero-img img {
+    border: 1px solid #d3c4b1;
+    padding: 10px;
+    background: #fff;
+    max-width: 220px;
+    border-radius: 0 !important; /* 取消圓角，改為圖片中的方正感 */
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+/* 標題裝飾：模仿圖片中的粗水平線 */
+section {
+    padding:
