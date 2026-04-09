@@ -7,8 +7,8 @@
     <style>
         /* --- 1. 顏色與字體設定 --- */
         :root {
-            --primary-color: #b58371; /* 範例圖的乾燥玫瑰色 */
-            --dark-bg: #343d46;    /* 範例圖的深藍灰色 */
+            --primary-color: #b58371; /* 乾燥玫瑰色 */
+            --dark-bg: #343d46;    /* 深藍灰色 */
             --side-bg: #f0f0f0;    /* 淺灰色側邊欄 */
             --text-main: #333;
         }
@@ -20,12 +20,17 @@
             font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             display: grid;
-            grid-template-columns: 350px 1fr; /* 建立左右雙欄佈局 */
+            grid-template-columns: 350px 1fr;
             min-height: 100vh;
             background-color: #fff;
             color: var(--text-main);
+            position: relative;
         }
 
         /* --- 2. 頂部裝飾幾何塊 --- */
@@ -54,10 +59,10 @@
         .hero-img img {
             width: 200px;
             height: 200px;
-            border-radius: 50%; /* 圓形頭像 */
+            border-radius: 50%;
             object-fit: cover;
             border: 6px solid white;
-            box-shadow: -15px -15px 0px var(--dark-bg); /* 模擬範例圖的幾何陰影 */
+            box-shadow: -15px -15px 0px var(--dark-bg);
             margin-bottom: 25px;
         }
 
@@ -82,7 +87,6 @@
             margin-bottom: 20px;
         }
 
-        /* 導覽列垂直化 */
         nav {
             width: 100%;
             margin-top: 20px;
@@ -142,6 +146,13 @@
             color: var(--dark-bg);
         }
 
+        .edu-date {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
         #skills ul {
             list-style: none;
             display: flex;
@@ -194,6 +205,9 @@
                 width: 100%;
                 height: 180px;
             }
+            main {
+                padding-top: 50px;
+            }
         }
     </style>
 </head>
@@ -205,25 +219,21 @@
         </div>
         <div class="hero-text">
             <h1>我是<span class="highlight">鄭伃媃</span></h1>
-            <p>亞洲大學學生 | 學號: 114018012</p>
+            <p>亞洲大學 聽語系 | 學號: 114018012</p>
             <a href="#contact" class="btn">聯絡我</a>
-
-        <audio controls autoplay loop style="margin-top: 20px; width: 250px;">
-    <source src="mp3/bg.mp3" type="audio/mpeg">
-</audio>
+            
+            <audio controls loop style="margin-top: 20px; width: 250px;">
+                <source src="mp3/bg.mp3" type="audio/mpeg">
+            </audio>
         </div>
 
         <nav>
             <ul class="nav-links">
                 <li><a href="#about">關於我</a></li>
-                <li><a href="#education">教育</a></li>
-                <li><a href="#skills">技能</a></li>
-                <li><a href="#projects">專案</a></li>
+                <li><a href="#education">教育背景</a></li>
+                <li><a href="#skills">專業技能</a></li>
+                <li><a href="#projects">專案經歷</a></li>
                 <li><a href="#contact">聯絡我</a></li>
-
-              
-
- 
             </ul>
         </nav>
     </header>
@@ -231,25 +241,32 @@
     <main>
         <section id="about">
             <h2>關於我</h2>
-            <p>目前就讀於亞洲大學。我是一個充滿熱情和創意的學生，熱衷於學習新技術並在實踐中應用所學。</p>
+            <p>目前就讀於亞洲大學。我是一個充滿熱情和創意的學生，熱衷於學習專業領域的新技術，並具備良好的溝通與表達能力。</p>
         </section>
 
         <section id="education">
             <h2>教育背景</h2>
             <div class="edu-item">
+                <div class="edu-date">2022 - 2025</div>
+                <h3>桃園市立楊梅高級中等學校</h3>
+                <p>普通科 | <strong>畢業</strong></p>
+            </div>
+            <div class="edu-item">
+                <div class="edu-date">2025 - 至今</div>
                 <h3>亞洲大學</h3>
+                <p>聽力暨語言治療學系 | <strong>就讀中</strong></p>
                 <p>學號: 114018012</p>
-                <p>2025 - 至今</p>
             </div>
         </section>
 
         <section id="skills">
-            <h2>技能</h2>
+            <h2>專業技能</h2>
             <ul>
                 <li>HTML & CSS</li>
                 <li>Git / GitHub</li>
                 <li>網頁開發基礎</li>
                 <li>溝通與表達能力</li>
+                <li>團隊合作與企劃</li>
             </ul>
         </section>
 
